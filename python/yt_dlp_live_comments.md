@@ -188,3 +188,8 @@ data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveCha
 ```python
 data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatPaidStickerRenderer"]
 ```
+
+#### 最初に表示されるYouTubeからのメッセージ
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatViewerEngagementMessageRenderer"]
+```
