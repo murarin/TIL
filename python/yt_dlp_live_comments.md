@@ -143,3 +143,48 @@ timestamp_text = chat["timestampText"]["simpleText"]  # 動画時間に対する
 video_offset_time = data["replayChatItemAction"]["videoOffsetTimeMsec"]  # 動画時間に対する投稿時間（ミリ秒）
 purchase_amount = chat["purchaseAmountText"]["simpleText"]  # スパチャの価格
 ```
+
+
+### その他チャットの種類
+
+#### 通常コメント
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatTextMessageRenderer"]
+```
+
+####  スパチャ (コメント欄)
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatPaidMessageRenderer"]
+```
+
+#### スパチャ（コメント欄上部）
+```python
+data["replayChatItemAction"]["actions"][0]["addLiveChatTickerItemAction"]["item"]["liveChatTickerPaidMessageItemRenderer"]
+```
+
+#### メーバーシップ入会通知
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatMembershipItemRenderer"]
+```
+
+#### コメント撤回通知
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatPlaceholderItemRenderer"]
+```
+
+#### メンバーシップギフト1
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatSponsorshipsGiftPurchaseAnnouncementRenderer"]
+```
+
+#### メンバーシップギフト2
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatSponsorshipsGiftRedemptionAnnouncementRenderer"]
+``` 
+
+メンバーシップギフト1とメンバーシップギフト2の違いはよくわからない
+
+#### ステッカー
+```python
+data["replayChatItemAction"]["actions"][0]["addChatItemAction"]["item"]["liveChatPaidStickerRenderer"]
+```
